@@ -1022,3 +1022,38 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    margin-top: 25px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-primary {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+
+  .btn-secondary {
+    margin-left: 0;
+    padding: 12px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .btn-secondary {
+    background: rgba(0,0,0,0.03);
+  }
+
+}
+

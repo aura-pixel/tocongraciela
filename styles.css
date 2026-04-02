@@ -1091,3 +1091,9 @@ section {
   transform: translateY(-3px);
   background: rgba(76, 175, 80, 0.12);
 }
+
+@media (max-width: 768px) {
+  .services-adult-list {
+    grid-template-columns: 1fr;
+  }
+}

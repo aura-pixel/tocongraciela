@@ -1057,3 +1057,37 @@ section {
 
 }
 
+/* SUBTÍTULO */
+.services-subtitle {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* LISTA ADULTOS */
+.services-adult-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ITEM */
+.adult-item {
+  background: rgba(76, 175, 80, 0.06);
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* HOVER SUAVE */
+.adult-item:hover {
+  transform: translateY(-3px);
+  background: rgba(76, 175, 80, 0.12);
+}

@@ -1,55 +1,30 @@
+// ==========================
+// HERO LOAD (fade inicial)
+// ==========================
 window.addEventListener("load", () => {
-  const heroText = document.querySelector(".hero-text");
-  const heroImg = document.querySelector(".hero-img");
-
-  heroText.classList.add("show");
-  heroImg.classList.add("show");
+  document.body.classList.add("loaded");
 });
 
-const elements = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-
-    if (top < triggerBottom) {
-      el.classList.add("active");
+// ==========================
+// SCROLL REVEAL PRO
+// ==========================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     }
   });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
-window.addEventListener("scroll", () => {
-  const scroll = window.scrollY;
-  const hero = document.querySelector(".hero");
-
-  hero.style.backgroundPositionY = `${scroll * 0.3}px`;
+}, {
+  threshold: 0.15
 });
 
-const floatItems = document.querySelectorAll(".float");
-
-floatItems.forEach((item, index) => {
-  let direction = 1;
-
-  setInterval(() => {
-    item.style.transform = `translateY(${direction * 8}px)`;
-    direction *= -1;
-  }, 2000 + index * 300);
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
 });
 
-const shapes = document.querySelectorAll(".shape");
-
-window.addEventListener("scroll", () => {
-  let scroll = window.scrollY;
-
-  shapes.forEach((shape, i) => {
-    shape.style.transform = `translateY(${scroll * (0.1 + i * 0.05)}px)`;
-  });
-});
-
+// ==========================
+// NAV ACTIVE LINK
+// ==========================
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
@@ -58,7 +33,8 @@ window.addEventListener("scroll", () => {
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 100) {
+
+    if (window.scrollY >= sectionTop - 120) {
       current = section.getAttribute("id");
     }
   });
@@ -71,25 +47,37 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
+// ==========================
+// SHAPES PARALLAX (SUAVE)
+// ==========================
+const shapes = document.querySelectorAll(".shape");
+
+window.addEventListener("scroll", () => {
+  const scroll = window.scrollY;
+
+  shapes.forEach((shape, i) => {
+    shape.style.transform = `translateY(${scroll * (0.08 + i * 0.03)}px)`;
+  });
+});
+
+// ==========================
+// CARRUSEL EXPERIENCIA PRO
+// ==========================
+const track = document.querySelector('.exp-track');
+const items = document.querySelectorAll('.exp-item');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
-const viewport = document.querySelector('.carousel-viewport');
+const viewport = document.querySelector('.exp-viewport');
 
 let index = 0;
 let itemWidth = 0;
 let maxIndex = 0;
-
-// 🔧 CONFIG
 const gap = 20;
 
-// ========================
-// SETUP
-// ========================
 function setupCarousel() {
-  const item = items[0];
-  itemWidth = item.getBoundingClientRect().width + gap;
+  if (!items.length) return;
+
+  itemWidth = items[0].getBoundingClientRect().width + gap;
 
   const visibleWidth = viewport.offsetWidth;
   const visibleItems = Math.floor(visibleWidth / itemWidth);
@@ -100,24 +88,19 @@ function setupCarousel() {
   updateCarousel();
 }
 
-// ========================
-// UPDATE
-// ========================
 function updateCarousel() {
   const move = index * itemWidth;
   track.style.transform = `translateX(-${move}px)`;
 
-  // flechas
+  // botones
   prev.style.opacity = index === 0 ? "0" : "1";
-  prev.style.pointerEvents = index === 0 ? "none" : "auto";
-
   next.style.opacity = index >= maxIndex ? "0" : "1";
+
+  prev.style.pointerEvents = index === 0 ? "none" : "auto";
   next.style.pointerEvents = index >= maxIndex ? "none" : "auto";
 }
 
-// ========================
 // BOTONES
-// ========================
 next.addEventListener('click', () => {
   if (index < maxIndex) {
     index++;
@@ -132,37 +115,34 @@ prev.addEventListener('click', () => {
   }
 });
 
-// ========================
-// SWIPE (móvil 🔥)
-// ========================
+// ==========================
+// AUTOPLAY + PAUSA
+// ==========================
+let autoPlay;
+
+function startAutoPlay() {
+  autoPlay = setInterval(() => {
+    if (index < maxIndex) {
+      index++;
+    } else {
+      index = 0;
+    }
+    updateCarousel();
+  }, 4000);
+}
+
+function stopAutoPlay() {
+  clearInterval(autoPlay);
+}
+
+viewport.addEventListener('mouseenter', stopAutoPlay);
+viewport.addEventListener('mouseleave', startAutoPlay);
+
+// ==========================
+// SWIPE MÓVIL
+// ==========================
 let startX = 0;
-let isDragging = false;
 
-viewport.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX;
-});
-
-viewport.addEventListener('mouseup', (e) => {
-  if (!isDragging) return;
-
-  let diff = e.pageX - startX;
-
-  if (diff > 50 && index > 0) {
-    index--;
-  } else if (diff < -50 && index < maxIndex) {
-    index++;
-  }
-
-  updateCarousel();
-  isDragging = false;
-});
-
-viewport.addEventListener('mouseleave', () => {
-  isDragging = false;
-});
-
-// touch (celular)
 viewport.addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
 });
@@ -179,10 +159,11 @@ viewport.addEventListener('touchend', (e) => {
   updateCarousel();
 });
 
-// ========================
-// AUTO RESIZE
-// ========================
+// ==========================
+// RESIZE
+// ==========================
 window.addEventListener('resize', setupCarousel);
 
-// iniciar
+// INIT
 setupCarousel();
+startAutoPlay();

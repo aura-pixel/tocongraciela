@@ -187,10 +187,10 @@ body {
   background: linear-gradient(
     to right,
     rgba(47,108,158,0.85),
-    rgba(47,108,158,0.45)
+    rgba(47,108,158,0.4)
   );
 
-  backdrop-filter: blur(2px); /* opcional, se ve más pro */
+  backdrop-filter: blur(2px); 
   z-index: 1;
 }
 

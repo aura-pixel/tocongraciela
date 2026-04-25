@@ -77,3 +77,10 @@ window.addEventListener("scroll", () => {
   });
 });
 
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    toggle.classList.remove("active");
+  });
+});
+

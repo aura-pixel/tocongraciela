@@ -186,11 +186,10 @@ body {
 
   background: linear-gradient(
     to right,
-    rgba(47,108,158,0.85),
-    rgba(47,108,158,0.4)
+    rgba(47,108,158,0.75),
+    rgba(47,108,158,0.25)
   );
 
-  backdrop-filter: blur(2px); 
   z-index: 1;
 }
 

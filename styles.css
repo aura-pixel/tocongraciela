@@ -932,6 +932,27 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+  .carousel-viewport {
+    overflow-x: auto;   /* 🔥 permite deslizar */
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-track {
+    transform: none !important; /* 🔥 desactiva el JS */
+  }
+
+}
+
+.carousel-item {
+  scroll-snap-align: center;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
 /*cobertura*/
 /* SECCIÓN */
 .cta {

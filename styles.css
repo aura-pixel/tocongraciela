@@ -175,7 +175,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  background: url("/toga.jpg") center/cover no-repeat;
+  background: url("/toga.jpg") center bottom/cover no-repeat;
   overflow: hidden;
 }
 
@@ -185,11 +185,12 @@ body {
   inset: 0;
 
   background: linear-gradient(
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.35)
+    to right,
+    rgba(47,108,158,0.85),
+    rgba(47,108,158,0.45)
   );
 
-  backdrop-filter: blur(3px); 
+  backdrop-filter: blur(2px); /* opcional, se ve más pro */
   z-index: 1;
 }
 

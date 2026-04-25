@@ -7,69 +7,87 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!--DISEÑO VISUAL-->
-  <div class="bg-shapes">
-  <span class="shape shape1"></span>
-  <span class="shape shape2"></span>
-  <span class="shape shape3"></span>
+<!-- NAV -->
+<header class="nav">
+
+  <div class="nav-container">
+
+    <!-- LOGO + MARCA -->
+    <div class="brand">
+      <img src="logo.png" alt="Logo Graciela Contreras" class="logo">
+
+      <div class="brand-text">
+        <span class="name">Graciela Contreras Munguía</span>
+        <span class="subtitle">Terapia ocupacional pediátrica</span>
+      </div>
+    </div>
+
+    <!-- LINKS -->
+    <nav class="nav-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Terapias</a>
+      <a href="#experiencia">Mi experiencia</a>
+      <a href="#contacto" class="btn-contacto">Contacto</a>
+    </nav>
+
+    <!-- BOTÓN MENÚ -->
+<div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
 </div>
 
-  <!-- NAV -->
-  <header class="nav">
-
-  <div class="brand">
-    <img src="/logo.png" alt="logo" class="logo">
-
-    <div class="brand-text">
-      <span class="name">Graciela Contreras Munguía</span>
-      <span class="subtitle">Terapia ocupacional pediátrica</span>
-    </div>
   </div>
-
-  <nav>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#proceso">Terapias</a>
-  <a href="#experiencia">Mi experiencia</a>
-  <a href="#contacto">Contacto</a>
-</nav>
 
 </header>
 
+<!--HERO -->
+<section class="hero" id="hero">
 
-  <!-- HERO -->
-  <section class="hero reveal" id="hero">
+  <!-- VIDEO FONDO -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="to.mp4" type="video/mp4">
+  </video>
 
-  <div class="hero-bg">
-    <img src="/hero.jpeg" alt="Terapia ocupacional" />
-  </div>
+  <!-- OVERLAY (clave para legibilidad) -->
+  <div class="hero-overlay"></div>
 
-  <div class="hero-overlay">
+  <div class="hero-container">
 
-    <div class="hero-content">
+    <!-- TEXTO -->
+    <div class="hero-text fade-up">
+      
+      <span class="hero-tag fade-in">
+        Terapia ocupacional pediátrica
+      </span>
 
       <h1>
-        Acompañando sueños,<br>
-        fortaleciendo habilidades,<br>
-        cambiando vidas
+        Ayudo a tu hijo a desarrollar su autonomía, atención y habilidades para la vida diaria
       </h1>
 
-      <p>
-        Terapia ocupacional pediátrica enfocada en el desarrollo,
-        bienestar y autonomía de tu pequeño.
+      <p class="hero-sub fade-up">
+        Acompañamiento profesional y cercano para mejorar su conducta, adaptación y desarrollo integral.
       </p>
 
-      <div class="hero-buttons">
-        <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20las%20terapias." 
+      <!-- bullets -->
+      <div class="hero-points fade-up">
+        <span>✔ Mejora en conducta y atención</span>
+        <span>✔ Mayor independencia</span>
+        <span>✔ Terapia personalizada</span>
+      </div>
+
+      <div class="hero-buttons fade-up">
+        <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20terapia%20ocupacional" 
            target="_blank" 
            class="btn-primary">
-          Agendar por WhatsApp
+          Agendar valoración
         </a>
 
         <a href="#sobre-mi" class="btn-secondary">
@@ -83,82 +101,46 @@
 
 </section>
 
-<!--PROBLEMA + CONFIANZA-->
-<section class="trust-pain reveal">
-
-  <div class="trust-pain-container">
-
-    <!-- TEXTO -->
-    <div class="trust-pain-text">
-
-      <h2>Si esto te suena familiar, estás en el lugar correcto</h2>
-
-      <ul class="pain-list">
-        <li>Tu hijo se frustra fácilmente o tiene cambios de conducta</li>
-        <li>Le cuesta concentrarse o adaptarse a su entorno</li>
-        <li>Tiene dificultades con la comida</li>
-        <li>Notas que necesita apoyo en su desarrollo</li>
-      </ul>
-
-      <p class="trust-message">
-        No estás exagerando ni estás solo.  
-        Existen formas de acompañar su desarrollo con herramientas adecuadas y guía profesional.
-      </p>
-
-    </div>
-
-    <!-- CONFIANZA -->
-    <div class="trust-box">
-
-      <div class="trust-item">✔ Atención personalizada</div>
-      <div class="trust-item">✔ Terapia basada en evidencia</div>
-      <div class="trust-item">✔ Acompañamiento a padres</div>
-      <div class="trust-item">✔ Seguimiento real de avances</div>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!--SOBRE MI -->
-<section class="about reveal" id="sobre-mi">
+<!--SOBRE MI -->
+<section class="about" id="sobre-mi">
 
   <div class="about-container">
 
     <!-- IMAGEN -->
-    <div class="about-image">
-      <img src="/graciela.png" alt="Graciela terapeuta">
+    <div class="about-img fade-up">
+      <div class="about-img-wrapper">
+        <img src="graciela.png" alt="Graciela terapeuta ocupacional">
+      </div>
     </div>
 
-    <!-- CONTENIDO -->
-    <div class="about-card">
+    <!-- TEXTO -->
+    <div class="about-text">
 
-      <h2>Sobre mí</h2>
+      <span class="about-tag fade-in">Sobre mí</span>
 
-      <p class="about-highlight">
-        Soy Graciela Contreras, terapeuta ocupacional enfocada en acompañar el desarrollo, la independencia y el bienestar desde un enfoque humano y personalizado.
+      <h2 class="fade-up">
+        Acompañando cada proceso con empatía y profesionalismo
+      </h2>
+
+      <p class="about-intro fade-up">
+        Soy <strong>Graciela Contreras</strong>, terapeuta ocupacional enfocada en el desarrollo, la independencia y el bienestar de cada persona desde un enfoque humano, empático y personalizado.
       </p>
 
-      <p>
-        Cuento con experiencia en población infantil y adulta, trabajando con intervenciones basadas en evidencia y centradas en la ocupación.
-      </p>
-
-      <p>
-        Me especializo en selectividad alimentaria, integración sensorial y rehabilitación neurológica, diseñando programas que favorecen la autonomía y calidad de vida.
+      <p class="fade-up">
+        Trabajo con población infantil y adulta, aplicando intervenciones basadas en evidencia que permiten mejorar la calidad de vida y la participación en actividades cotidianas.
       </p>
 
       <!-- ESPECIALIDADES -->
-      <div class="about-tags">
-        <span>🧠 Integración sensorial</span>
-        <span>🍽️ Selectividad alimentaria</span>
-        <span>🦾 Férulas</span>
-        <span>🏠 Adaptaciones</span>
-        <span>🧩 Rehabilitación</span>
+      <div class="about-skills fade-up">
+        <div class="skill">🧠 Integración sensorial</div>
+        <div class="skill">🍽️ Selectividad alimentaria</div>
+        <div class="skill">🦾 Férulas personalizadas</div>
+        <div class="skill">🏠 Adaptaciones funcionales</div>
+        <div class="skill">🧩 Rehabilitación neurológica</div>
       </div>
 
-      <p class="about-closing">
-        Mi objetivo es potenciar las capacidades de cada persona y acompañarla en su proceso hacia una vida más independiente.
+      <p class="about-closing fade-up">
+        Mi objetivo es acompañar cada proceso de forma cercana, potenciando habilidades y construyendo caminos hacia una vida más independiente y significativa.
       </p>
 
     </div>
@@ -168,67 +150,75 @@
 </section>
 
 <!--COMO PUEDO AYUDARTE -->
-<section class="services reveal" id="servicios">
+<section class="services" id="servicios">
 
   <div class="services-header">
-    <h2>¿Cómo puedo ayudarte?</h2>
-    <p>
-      Cada proceso es único, por eso adapto las terapias a las necesidades reales de cada persona.
+
+    <span class="services-tag fade-in">¿Cómo puedo ayudarte?</span>
+
+    <h2 class="fade-up">
+      Cada terapia está diseñada para resolver necesidades reales
+    </h2>
+
+    <p class="services-intro fade-up">
+      Muchos niños presentan dificultades que impactan su día a día. 
+      A través de terapia ocupacional, trabajamos en soluciones personalizadas para mejorar su desarrollo y bienestar.
     </p>
+
   </div>
 
   <div class="services-grid">
 
-    <div class="service-card">
-      <div class="icon">🧠</div>
-      <h3>Regulación sensorial</h3>
+    <div class="card fade-up">
+      <div class="card-icon">🧠</div>
+      <h3>Integración sensorial</h3>
       <p>
-        Ayuda a tu hijo a adaptarse mejor a los estímulos del entorno, mejorando su atención, conducta y bienestar.
+        Si tu hijo se sobreestimula con ruidos, texturas o movimientos, trabajamos en regular su respuesta para mejorar su conducta y atención.
       </p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🍽️</div>
-      <h3>Alimentación sin estrés</h3>
+    <div class="card fade-up">
+      <div class="card-icon">🍽️</div>
+      <h3>Selectividad alimentaria</h3>
       <p>
-        Mejora la relación con la comida y amplía el repertorio alimenticio de forma respetuosa y progresiva.
+        Cuando comer se vuelve un reto, implementamos estrategias para ampliar su alimentación y mejorar su relación con la comida.
       </p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🦾</div>
-      <h3>Soporte funcional</h3>
+    <div class="card fade-up">
+      <div class="card-icon">🦾</div>
+      <h3>Férulas personalizadas</h3>
       <p>
-        Férulas personalizadas que favorecen la alineación, protección y funcionalidad en actividades diarias.
+        Diseñadas para proteger, alinear y mejorar la funcionalidad en cada caso específico.
       </p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🏠</div>
-      <h3>Adaptación del entorno</h3>
+    <div class="card fade-up">
+      <div class="card-icon">🏠</div>
+      <h3>Adaptaciones funcionales</h3>
       <p>
-        Ajustes en casa y actividades para facilitar la independencia y participación diaria.
+        Ajustamos el entorno y las actividades para facilitar su participación en la vida diaria.
       </p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🧩</div>
+    <div class="card fade-up">
+      <div class="card-icon">🧩</div>
       <h3>Rehabilitación neurológica</h3>
       <p>
-        Intervenciones enfocadas en recuperar habilidades y fomentar autonomía en la vida diaria.
+        Enfocada en recuperar habilidades y fomentar independencia en actividades cotidianas.
       </p>
     </div>
 
   </div>
 
   <!-- CTA -->
-  <div class="services-cta">
+  <div class="services-cta fade-up">
 
-    <p>
-      ¿Sientes que tu hijo necesita apoyo en alguna de estas áreas?
+    <p class="services-message">
+      Si identificas alguna de estas señales, es momento de actuar.
     </p>
 
-    <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20las%20terapias." 
+    <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20terapia%20ocupacional" 
        target="_blank" 
        class="btn-primary">
       Agendar valoración
@@ -239,71 +229,57 @@
 </section>
 
 <!--A QUIEN ATIENDO -->
-<section class="patients reveal" id="pacientes">
+<section class="patients" id="pacientes">
 
   <div class="patients-header">
-    <h2>¿A quién acompaño?</h2>
-    <p>
-      Cada persona tiene un proceso distinto, pero hay señales que indican cuándo es momento de buscar apoyo.
-    </p>
+    <span class="patients-tag fade-in">Pacientes</span>
+    <h2 class="fade-up">¿A quién acompaño?</h2>
+    <p class="fade-up">
+  Cada proceso es único. Trabajo con niños, adolescentes y adultos que presentan diferentes necesidades,
+  adaptando cada intervención a su desarrollo, etapa de vida y contexto.
+</p>
   </div>
 
-  <div class="patients-grid">
+  <div class="patients-container">
 
-    <div class="patient-card">
-      <img src="/niño.png" alt="niños">
-      <div class="patient-overlay">
-        <h3>👶 Desarrollo infantil</h3>
+    <div class="patient-card fade-up">
+      <img src="niño.png" alt="Niños en terapia ocupacional">
+      <div class="overlay">
+        <h3>👶 Niños</h3>
         <p>
-          Niños que necesitan apoyo para fortalecer habilidades, autonomía y participación en su día a día.
+          Fortalecemos habilidades, autonomía y participación en su vida diaria.
         </p>
       </div>
     </div>
 
-    <div class="patient-card">
-      <img src="/trastornos.webp" alt="trastornos">
-      <div class="patient-overlay">
+    <div class="patient-card fade-up">
+      <img src="trastornos.webp" alt="Trastornos del neurodesarrollo">
+      <div class="overlay">
         <h3>🧠 Neurodesarrollo</h3>
         <p>
-          Dificultades sensoriales, de atención o conducta que afectan su regulación y adaptación.
+          Estrategias para regulación, atención y conducta.
         </p>
       </div>
     </div>
 
-    <div class="patient-card">
-      <img src="/alimentacion.jpg" alt="alimentación">
-      <div class="patient-overlay">
+    <div class="patient-card fade-up">
+      <img src="alimentacion.jpg" alt="Dificultades en alimentación">
+      <div class="overlay">
         <h3>🍽️ Alimentación</h3>
         <p>
-          Selectividad alimentaria o rechazo a ciertos alimentos que generan estrés en casa.
+          Mejoramos la relación con la comida y ampliamos opciones.
         </p>
       </div>
     </div>
 
-    <div class="patient-card">
-      <img src="/neu.png" alt="neurológico">
-      <div class="patient-overlay">
-        <h3>🦾 Rehabilitación</h3>
+    <div class="patient-card fade-up">
+      <img src="neu.png" alt="Condiciones neurológicas">
+      <div class="overlay">
+        <h3>🦾 Neurológico</h3>
         <p>
-          Condiciones neurológicas que requieren intervención para mejorar funcionalidad e independencia.
+          Recuperación de habilidades e independencia funcional.
         </p>
       </div>
-    </div>
-
-  </div>
-
-  <!-- ADULTOS -->
-  <div class="patients-adult">
-
-    <h3>También acompaño a adultos en procesos como:</h3>
-
-    <div class="adult-tags">
-      <span>🧠 Rehabilitación neurológica</span>
-      <span>🧩 Estimulación cognitiva</span>
-      <span>🧍 Actividades diarias</span>
-      <span>🏠 Adaptación del entorno</span>
-      <span>💆 Manejo de tensión</span>
-      <span>✨ Liberación miofascial</span>
     </div>
 
   </div>
@@ -311,53 +287,56 @@
 </section>
 
 <!--COMO SON LAS TERAPIAS -->
-<section class="process reveal" id="proceso">
+<section class="process" id="proceso">
 
   <div class="process-header">
-    <h2>¿Cómo es el proceso?</h2>
-    <p>
-      Cada intervención se adapta a las necesidades de cada persona, pero seguimos un proceso claro para lograr resultados reales.
+    <span class="process-tag fade-in">Proceso</span>
+
+    <h2 class="fade-up">¿Cómo es el proceso de terapia?</h2>
+
+    <p class="fade-up">
+      Cada proceso es personalizado, pero seguimos una estructura clara para lograr avances reales y medibles.
     </p>
   </div>
 
   <div class="process-timeline">
 
-    <div class="process-step">
+    <div class="step fade-up">
       <div class="step-circle">1</div>
       <div class="step-content">
         <h3>Valoración inicial</h3>
         <p>
-          Conozco a detalle las necesidades, habilidades y áreas de oportunidad.
+          Evaluamos habilidades, necesidades y áreas de oportunidad para comprender el caso de forma integral.
         </p>
       </div>
     </div>
 
-    <div class="process-step">
+    <div class="step fade-up">
       <div class="step-circle">2</div>
       <div class="step-content">
         <h3>Plan personalizado</h3>
         <p>
-          Diseño un programa adaptado a los objetivos y contexto de cada persona.
+          Diseñamos un programa adaptado a los objetivos específicos de cada paciente.
         </p>
       </div>
     </div>
 
-    <div class="process-step">
+    <div class="step fade-up">
       <div class="step-circle">3</div>
       <div class="step-content">
         <h3>Intervención terapéutica</h3>
         <p>
-          Se trabajan habilidades clave mediante sesiones estructuradas y dinámicas.
+          Sesiones enfocadas en desarrollar habilidades y mejorar su funcionalidad en la vida diaria.
         </p>
       </div>
     </div>
 
-    <div class="process-step">
+    <div class="step fade-up">
       <div class="step-circle">4</div>
       <div class="step-content">
         <h3>Seguimiento y ajustes</h3>
         <p>
-          Se monitorea el progreso y se ajusta el plan para mejores resultados.
+          Monitoreamos avances y ajustamos el plan para asegurar resultados reales.
         </p>
       </div>
     </div>
@@ -367,133 +346,122 @@
 </section>
 
 <!--MI EXPERIENCIA-->
-<section class="experience reveal" id="experiencia">
+<section class="gallery" id="experiencia">
 
-  <div class="experience-header">
-    <h2>Así se vive cada proceso</h2>
-    <p>
-      Cada sesión está diseñada para generar avances reales, respetando el ritmo de cada persona.
+  <div class="gallery-header">
+    <span class="gallery-tag fade-in">Experiencia</span>
+
+    <h2 class="fade-up">Así se viven las terapias</h2>
+
+    <p class="gallery-sub fade-up">
+      Cada proceso está lleno de pequeños avances que construyen grandes cambios.
     </p>
   </div>
 
-  <div class="experience-carousel">
+  <div class="carousel fade-up">
 
-    <button class="exp-btn prev">‹</button>
+    <button class="carousel-btn prev">&#10094;</button>
 
-    <div class="exp-viewport">
-      <div class="exp-track">
+    <div class="carousel-viewport">
+      <div class="carousel-track">
 
-        <div class="exp-item">
-          <img src="/1.jpeg" alt="">
-          <div class="exp-overlay">
-            <p>Exploración sensorial y regulación</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <img src="/2.jpeg" alt="">
-          <div class="exp-overlay">
-            <p>Ambientes adaptados y seguros</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <img src="/3.jpeg" alt="">
-          <div class="exp-overlay">
-            <p>Estimulación mediante juego</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <img src="/4.jpeg" alt="">
-          <div class="exp-overlay">
-            <p>Trabajo en habilidades motoras</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <img src="/5.jpeg" alt="">
-          <div class="exp-overlay">
-            <p>Desarrollo de motricidad fina</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <img src="/6.jpeg" alt="">
-          <div class="exp-overlay">
-            <p>Juego terapéutico estructurado</p>
-          </div>
-        </div>
+        <div class="carousel-item"><img src="1.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="2.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="3.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="4.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="5.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="6.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="7.jpeg" alt=""></div>
+        <div class="carousel-item"><img src="8.jpeg" alt=""></div>
 
       </div>
     </div>
 
-    <button class="exp-btn next">›</button>
+    <button class="carousel-btn next">&#10095;</button>
 
   </div>
 
 </section>
 
 <!--COBERTURA + CTA -->
-<section class="cta reveal" id="contacto">
+<section class="cta" id="contacto">
 
-  <div class="cta-box">
+  <div class="cta-container">
 
-    <h2>
-      Tu hijo no tiene que pasar por esto solo
+    <span class="cta-tag fade-in">Agenda tu cita</span>
+
+    <h2 class="fade-up">
+      Tu hijo puede avanzar más de lo que imaginas
     </h2>
 
-    <p class="cta-main">
-      Acompañar su desarrollo puede sentirse abrumador, pero no tienes que hacerlo sin guía.  
-      Estoy aquí para ayudarte a construir un proceso claro, respetuoso y con resultados reales.
+    <p class="cta-message fade-up">
+      Dar el primer paso puede ser difícil, pero con el acompañamiento adecuado,
+      tu hijo puede desarrollar habilidades que marcarán una gran diferencia en su vida diaria.
     </p>
 
-    <!-- BENEFICIOS -->
-    <div class="cta-benefits">
-      <div>✔ Atención personalizada</div>
-      <div>✔ Acompañamiento a padres</div>
-      <div>✔ Terapia basada en evidencia</div>
-      <div>✔ Seguimiento real de avances</div>
+    <!-- beneficios -->
+    <div class="cta-benefits fade-up">
+      <span>✔ Atención personalizada</span>
+      <span>✔ Enfoque profesional y humano</span>
+      <span>✔ Resultados progresivos y reales</span>
     </div>
 
-    <!-- INFO -->
-    <div class="cta-info">
+    <!-- info -->
+    <div class="cta-info-box fade-up">
       <p>📍 Atención a domicilio en Zinacantepec, Toluca y Metepec</p>
-      <p>🕒 Lunes a viernes: 17:00 – 20:00</p>
-      <p>🕒 Fines de semana: 8:00 – 14:00 (previa cita)</p>
+      <p>🕒 Lunes a viernes: 17:00 – 20:00 hrs</p>
+      <p>🕒 Fines de semana: 8:00 – 14:00 hrs (previa cita)</p>
     </div>
 
-    <!-- BOTÓN -->
-    <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20las%20terapias." 
+    <!-- botón -->
+    <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20terapia%20ocupacional" 
        target="_blank" 
-       class="cta-button">
-      Agendar primera valoración
+       class="btn-primary cta-btn fade-up">
+      Agendar valoración 📲
     </a>
 
-    <span class="cta-note">
-      Respuesta rápida por WhatsApp 📲
-    </span>
+    <p class="cta-note fade-in">
+      Respuesta rápida por WhatsApp
+    </p>
 
   </div>
 
 </section>
 
 <!--FOOTER-->
-<footer class="footer reveal">
+<footer class="footer">
 
   <div class="footer-container">
 
-    <!-- MARCA -->
+    <!-- BRAND -->
     <div class="footer-brand">
-      <h3>Graciela Contreras</h3>
-      <p class="footer-tagline">
-        Terapia ocupacional pediátrica centrada en el desarrollo, la autonomía y el bienestar.
-      </p>
+      <h3>Graciela Contreras Munguía</h3>
+      <p>Terapia ocupacional pediátrica</p>
     </div>
 
-    <!-- NAVEGACIÓN -->
+    <!-- CONTACTO -->
+    <div class="footer-contact">
+      <p>📍 Zinacantepec, Toluca y Metepec</p>
+      <p>🕒 Atención con cita previa</p>
+
+      <div class="footer-socials">
+
+  <a href="https://wa.me/527291020538" target="_blank" class="social-link">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Enviar mensaje</span>
+  </a>
+
+  <a href="https://www.instagram.com/tocongraciela/" target="_blank" class="social-link">
+    <i class="fa-brands fa-instagram"></i>
+    <span>tocongraciela</span>
+  </a>
+
+</div>
+ 
+    </div>
+
+    <!-- LINKS -->
     <div class="footer-links">
-      <h4>Secciones</h4>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
@@ -501,38 +469,29 @@
       <a href="#contacto">Contacto</a>
     </div>
 
-    <!-- CONTACTO -->
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <p>📍 Zinacantepec, Toluca y Metepec</p>
-      <p>📲 729 102 0538</p>
-      <p>🕒 Cita previa</p>
-
-      <a href="https://wa.me/527291020538?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20las%20terapias." 
-         target="_blank" 
-         class="footer-whatsapp">
-        Agendar por WhatsApp
-      </a>
-    </div>
-
   </div>
 
   <!-- DIVISOR -->
+  <div class="footer-divider"></div>
+
+  <!-- BOTTOM -->
   <div class="footer-bottom">
 
-    <p>© 2026 Graciela Contreras. Todos los derechos reservados.</p>
+    <p>© 2026 Todos los derechos reservados</p>
 
     <div class="footer-dev">
       <span>Desarrollado por</span>
-      <img src="/aura.png" alt="Aura Dev Studio">
-      <span>Aura Dev Studio</span>
+      <div class="dev-brand">
+        <img src="aura.png" alt="Aura Dev Agency">
+        <span>Aura Dev Agency</span>
+      </div>
     </div>
 
   </div>
 
 </footer>
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
